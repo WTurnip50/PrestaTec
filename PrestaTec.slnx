@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PrestaTec.App/PrestaTec.App.csproj" />
+  <Project Path="PrestaTec.Core/PrestaTec.Core.csproj" />
+  <Project Path="PrestaTec.Tests/PrestaTec.Tests.csproj" />
+</Solution>
