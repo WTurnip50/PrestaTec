@@ -1,0 +1,12 @@
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\bin\Debug\net10.0\PrestaTec.Core.deps.json
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\bin\Debug\net10.0\PrestaTec.Core.dll
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\bin\Debug\net10.0\PrestaTec.Core.pdb
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.AssemblyInfoInputs.cache
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.AssemblyInfo.cs
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.csproj.CoreCompileInputs.cache
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.sourcelink.json
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.dll
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\refint\PrestaTec.Core.dll
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\PrestaTec.Core.pdb
+C:\Users\snach\Documents\GitHub\PrestaTec\PrestaTec.Core\obj\Debug\net10.0\ref\PrestaTec.Core.dll
