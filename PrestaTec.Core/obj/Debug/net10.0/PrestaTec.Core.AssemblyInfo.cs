@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrestaTec.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+035d9b676113e4b0a06f0ea71ee1f3cbc47b3251")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3531e5c1bea7935d9df08418f3449b505946c560")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrestaTec.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrestaTec.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

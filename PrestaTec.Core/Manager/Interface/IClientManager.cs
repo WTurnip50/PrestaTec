@@ -5,4 +5,6 @@ public interface IClientManager
 {
     Client SetNewClient(int id);
     void GetClientInfo(int clientId,List<Loan>list);
+    public bool FindClientById(int clientId, List<Client> list);
+    void ShowAllClients(List<Client> list);
 }

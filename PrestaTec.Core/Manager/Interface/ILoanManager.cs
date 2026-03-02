@@ -3,6 +3,6 @@ namespace PrestaTec.Core.Manager.Interface;
 
 public interface ILoanManager
 {
-    Loan SetNewLoan(Loan loan,int  clientId);
+    Loan SetNewLoan(List<Client> list,int  clientId);
     
 }

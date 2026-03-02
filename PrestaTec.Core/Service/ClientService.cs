@@ -14,7 +14,7 @@ public class ClientService : IClientService
         {
             Console.WriteLine("Enter your name: ");
             name = Console.ReadLine();
-            if (name.Length == 0)
+            if (name.Length == 0 || name.IsWhiteSpace())
             {
                 Console.WriteLine("Name cannot be empty");
                 name = "";
@@ -47,13 +47,27 @@ public class ClientService : IClientService
         return newClient;
     }
 
+    public bool FindClientById(int id, List<Client> clients)
+    {
+        var result = clients.Where(c => c.ClientId == id).ToList();
+        if (result.Count == 0)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("No clients found");
+            Console.ResetColor();
+            return false;
+        }
+        return true;
+    }
+
     public void GetClientFullInfo(int clientId,List<Loan> list)
     {
         //Here we are using LINQ(Language Integrated Query) to find the client loan data
         var result = list.Where(c => c.ClientId == clientId).ToList();
         if (result.Count == 0)
         {
-            Console.WriteLine("No clients found");
+            Console.WriteLine("There are no active loans for the customer");
         }
         else
         {
@@ -63,10 +77,36 @@ public class ClientService : IClientService
                 AmountRequested = result[0].AmountRequested,
                 DurationInMonths = result[0].DurationInMonths,
                 AnnualInterestRate =  result[0].AnnualInterestRate,
+                monthlyPayment = result[0].monthlyPayment,
             };
             Console.WriteLine($"Client id: {clientId}");
             Console.WriteLine($"Amount requested: {loan.AmountRequested}");
             Console.WriteLine($"Duration in months: {loan.DurationInMonths}");
+            Console.WriteLine($"MonthlyPayment: {loan.monthlyPayment}");
+        }
+    }
+
+    public void GetAllClients(List<Client> list)
+    {
+        foreach (var client in list)  
+        {
+            Console.WriteLine("----------");
+            Console.WriteLine("Client id: " + client.ClientId);
+            Console.WriteLine("Client Name: " + client.FullName);
+            Console.WriteLine("Client Monthly Income: " + client.MonthlyIncome);
+            if (client.Status)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Client Status: Active");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Client Status: Inactive");
+                Console.ResetColor();
+            }
+            Console.WriteLine("----------");
         }
     }
 }

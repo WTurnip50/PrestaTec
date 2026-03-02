@@ -20,4 +20,15 @@ public class ClientManager : IClientManager
     {
         _service.GetClientFullInfo(clientId, list);
     }
+
+    public bool FindClientById(int clientId, List<Client> list)
+    {
+        return _service.FindClientById(clientId, list);
+       
+    }
+
+    public void ShowAllClients(List<Client> list)
+    {
+        _service.GetAllClients(list);
+    }
 }

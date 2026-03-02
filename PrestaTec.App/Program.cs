@@ -16,6 +16,9 @@ public static class Program
         
         var clientService = new ClientService();
         var clientManager = new ClientManager(clientService);
+        var loanService = new LoanService();
+        var loanManager = new LoanManager(loanService);
+        
         
         while (option != 5)
         {
@@ -33,7 +36,9 @@ public static class Program
                if (clients.Count < 1)
                {
                    Console.Clear();
-                   clients.Add(clientManager.SetNewClient(0));
+                   var add = clientManager.SetNewClient(0);
+                   add.Status = true;
+                   clients.Add(add);
                }
                else
                {
@@ -54,7 +59,23 @@ public static class Program
                }
                else
                {
-                   System.Console.WriteLine("Get a loan");
+                   Console.Clear();
+                   Console.WriteLine("Enter your id: ");
+                   clientid = Convert.ToInt32(Console.ReadLine());
+                   if (clientManager.FindClientById(clientid, clients))
+                   {
+                       if (clients[clientid].Status)
+                       {
+                           Console.WriteLine("Add a new loan");
+                           loans.Add(loanManager.SetNewLoan(clients, clientid));
+                           clients[clientid].Status = false;   
+                       }
+                       else
+                       {
+                           Console.ForegroundColor = ConsoleColor.Red;
+                           Console.WriteLine("Client already has a loan");
+                       }
+                   }
                }
            }
 
@@ -65,7 +86,7 @@ public static class Program
                    Console.Clear();
                    Console.ForegroundColor = ConsoleColor.Red;
                    Console.WriteLine("Please add a client or a new loan");
-                   Console.ForegroundColor = ConsoleColor.White;
+                   Console.ResetColor();
                }
                else
                {
@@ -74,7 +95,11 @@ public static class Program
                    try
                    {
                        clientid = Convert.ToInt32(Console.ReadLine());
-                       clientManager.GetClientInfo(clientid, loans);
+                       if (clientManager.FindClientById(clientid, clients))
+                       {
+                           Console.WriteLine("Your loan information is");
+                           clientManager.GetClientInfo(clientid, loans);
+                       }
                    }
                    catch (Exception e)
                    {
@@ -87,9 +112,20 @@ public static class Program
 
            if (option == 4)
            {
-               System.Console.WriteLine("Get all client information");
                //Sends Clients and loans List, Shows all info related to each client
-               
+               if (clients.Count < 1 && loans.Count < 1)
+               {
+                   Console.Clear();
+                   Console.ForegroundColor = ConsoleColor.Red;
+                   Console.WriteLine("Please add a client or a new loan");
+                   Console.ResetColor();
+               }
+               else
+               {
+                   Console.Clear();
+                   Console.WriteLine("Showing all client information");
+                   clientManager.ShowAllClients(clients);
+               }
            }
 
            if (option == 5)
