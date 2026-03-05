@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrestaTec.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3531e5c1bea7935d9df08418f3449b505946c560")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb43cbe7bca05b2f4fef54492d9f6174bd731343")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrestaTec.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrestaTec.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

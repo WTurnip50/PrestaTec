@@ -11,9 +11,9 @@ public class ClientManager : IClientManager
     {
         _service = service;
     }
-    public Client SetNewClient(int id)
+    public Client SetNewClient(Client client)
     {
-        return _service.CreateNewClient(id);
+        return _service.CreateNewClient(client);
     }
 
     public void GetClientInfo(int clientId, List<Loan> list)

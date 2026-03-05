@@ -5,43 +5,15 @@ namespace PrestaTec.Core.Service;
 
 public class ClientService : IClientService
 {
-    public Client CreateNewClient(int id)
+    public Client CreateNewClient(Client client)
     {
-        string? name = "";
-        float monthlyIncome = 0;
-        bool flag = false;
-        while (flag != true)
-        {
-            Console.WriteLine("Enter your name: ");
-            name = Console.ReadLine();
-            if (name.Length == 0 || name.IsWhiteSpace())
-            {
-                Console.WriteLine("Name cannot be empty");
-                name = "";
-            }
-            else
-            {
-                while (flag!=true)
-                {
-                    Console.WriteLine("Enter your monthly income: ");
-                    Single.TryParse(Console.ReadLine(), out monthlyIncome);
-                    if (monthlyIncome <= 0)
-                    {
-                        Console.WriteLine("Monthly income cannot be negative or zero");
-                    }
-                    else
-                    {
-                        flag = true;
-                    }
-                }
-            }
-        }
+        
         Console.Clear();
         var newClient = new Client
         {
-            ClientId = id,
-            FullName = name,
-            MonthlyIncome = monthlyIncome,
+            ClientId =  client.ClientId,
+            FullName = client.FullName,
+            MonthlyIncome = client.MonthlyIncome,
             Status = true
         };
         return newClient;

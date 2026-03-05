@@ -4,7 +4,6 @@ namespace PrestaTec.Core.Service.Interface;
 
 public interface ILoanService
 {
-    Loan SetNewLoan(int clientId,List<Client>clients);
-    
+    Loan SetNewLoan(Loan loan);
     
 }

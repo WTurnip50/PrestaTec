@@ -13,10 +13,8 @@ public class LoanManager : ILoanManager
         _service = service;
     }
     
-    
-    
-    public Loan SetNewLoan(List<Client> list, int clientId)
+    public Loan SetNewLoan(Loan loan)
     {
-        return _service.SetNewLoan(clientId,list);
+        return _service.SetNewLoan(loan);
     }
 }
